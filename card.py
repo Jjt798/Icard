@@ -72,7 +72,7 @@ def create_id_card(student, school):
     small_font = _load_font(False, 14)
     HEADER_H = 100
     BORDER = 18
-    draw.rectangle([(0, 0), (WIDTH, HEADER_H)], fill="#1565C0")
+    draw.rectangle([(0, 0), (WIDTH, HEADER_H)], fill="#1976D2")
     LOGO_SIZE = 80
     logo_x = 35
     logo_y = (HEADER_H - LOGO_SIZE) // 2
