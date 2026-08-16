@@ -142,15 +142,15 @@ with st.sidebar:
                 + ", ".join(sorted(duplicates))
             )
  
-student_names = sorted(df[mapping["name"]].dropna().astype(str).unique())
+student_sr_number = sorted(df[mapping["sr"]].dropna().astype(str).unique())
  
-if not student_names:
+if not student_sr_number:
     st.warning("No student names found in the selected column.")
     st.stop()
  
-student_name = st.selectbox("👤 Select Student", student_names)
+student_sr_number = st.selectbox("Select Admission Number", student_sr_number)
  
-matches = df[df[mapping["name"]].astype(str) == student_name]
+matches = df[df[mapping["name"]].astype(str) == student_sr_number]
 if len(matches) > 1:
     st.info(f"ℹ️ {len(matches)} students share this name — showing the first match.")
 row = matches.iloc[0]
