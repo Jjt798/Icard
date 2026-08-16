@@ -150,7 +150,7 @@ if not student_sr_number:
  
 student_sr_number = st.selectbox("Select Admission Number", student_sr_number)
  
-matches = df[df[mapping["name"]].astype(str) == student_sr_number]
+matches = df[df[mapping["sr"]].astype(str) == student_sr_number]
 if len(matches) > 1:
     st.info(f"ℹ️ {len(matches)} students share this name — showing the first match.")
 row = matches.iloc[0]
